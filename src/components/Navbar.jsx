@@ -37,7 +37,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Link to="/" 
-          className="F7F7F7 ml-32">
+          className="ml-32">
             <button className=" bg-[#FF800B] border border-[#D1EEA7] text-white px-7 py-2 text-sm rounded-4xl cursor-pointer hover:bg-[#f77700] transition ease-in-out duration-300 font-poppins">
               Login 
             </button>
