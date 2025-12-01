@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar"
 import { Hero } from "../components/Hero"
 import { PageCarousel } from "../components/PageCarousel"
+import { Features } from "../components/Features"
 
 export const Home = () => {
   return (
@@ -8,6 +9,7 @@ export const Home = () => {
         <Navbar/>
         <Hero/>
         <PageCarousel/>
+        <Features/>
     </div>
   )
 }
