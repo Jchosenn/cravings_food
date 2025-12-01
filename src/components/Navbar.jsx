@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { FiMenu, FiX } from "react-icons/fi";
-import logo from "../assets/images/Craving.svg";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useRef, useEffect } from "react"
+import { Link } from "react-router-dom"
+import { FiMenu, FiX } from "react-icons/fi"
+import logo from "../assets/images/Craving.svg"
+import { motion, AnimatePresence } from "framer-motion"
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,15 +13,14 @@ const Navbar = () => {
     { name: "Features", path: "/" },
     { name: "Groceries", path: "/" },
     { name: "Contact Us", path: "/" },
-  ];
+  ]
 
-  // CLOSE MENU WHEN CLICKING OUTSIDE
   useEffect(() => {
     const handler = (e) => {
       if (menuRef.current && !menuRef.current.contains(e.target)) {
         setMenuOpen(false);
       }
-    };
+    }
 
     if (menuOpen) {
       document.addEventListener("mousedown", handler);
@@ -30,7 +29,7 @@ const Navbar = () => {
     }
 
     return () => document.removeEventListener("mousedown", handler);
-  }, [menuOpen]);
+  }, [menuOpen])
 
   return (
     <nav className="font-rubik w-full sticky top-0 z-999 bg-white/70 backdrop-blur-md px-4 sm:px-8 py-4 shadow-sm">
@@ -39,8 +38,6 @@ const Navbar = () => {
         <Link to="/" className="flex items-center">
           <img src={logo} alt="Craving logo" className="cursor-pointer w-[120px] sm:w-[140px]" />
         </Link>
-
-        {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-10">
           {navLinks.map((link, index) => (
             <Link
@@ -68,7 +65,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -99,7 +95,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
