@@ -1,9 +1,8 @@
-import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion"
 import clock from "../assets/images/clock.svg"
 import user from "../assets/images/securityuser.svg"
 import location from "../assets/images/location.svg"
-import cocacola from "../assets/images/craving-cocaCola.png"
+import { LogoCarousel } from "../Layouts/LogoCarousel"
 
 const infoCards = [
   {
@@ -26,22 +25,10 @@ const infoCards = [
   },
 ];
 
-const logos = [cocacola, cocacola, cocacola, cocacola, cocacola];
 
 export const Carousel = () => {
- const carouselRef = useRef(null);
- const [scrollWidth, setScrollWidth] = useState(0)
-
-   useEffect(() => {
-    if (carouselRef.current) {
-      // total width of the duplicated logos
-      setScrollWidth(carouselRef.current.scrollWidth / 2);
-    }
-  }, [])
-
   return (
     <div className="px-6 py-10 md:px-20 lg:py-24 flex flex-col gap-20">
-      {/* INFO CARDS */}
       <div className="grid md:grid-cols-3 gap-12">
         {infoCards.map((card, index) => (
           <motion.div
@@ -66,19 +53,7 @@ export const Carousel = () => {
           </motion.div>
         ))}
       </div>
-
-      {/* SLIDING LOGO CAROUSEL */}
-      <div className="overflow-hidden relative">
-        <motion.div
-          className="flex gap-8"
-          animate={{ x: ["0%", "-40%"] }}
-          transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-        >
-          {logos.concat(logos).map((logoSrc, index) => (
-            <img key={index} src={logoSrc} alt="CocaCola Logo" className="w-40 shrink-0" />
-          ))}
-        </motion.div>
-      </div>
+    <LogoCarousel/>
     </div>
-  );
-};
+  )
+}
