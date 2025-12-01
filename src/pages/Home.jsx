@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar"
 import { Hero } from "../components/Hero"
-import { Carousel } from "../components/carousel"
+import { Carousel } from "../components/carousel";
 
 
 export const Home = () => {
