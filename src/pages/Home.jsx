@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar"
 import { Hero } from "../components/Hero"
 import { PageCarousel } from "../components/PageCarousel"
 import { Features } from "../components/Features"
+import { Restaurant } from "../components/Restaurant"
 
 export const Home = () => {
   return (
@@ -10,6 +11,7 @@ export const Home = () => {
         <Hero/>
         <PageCarousel/>
         <Features/>
+        <Restaurant/>
     </div>
   )
 }
