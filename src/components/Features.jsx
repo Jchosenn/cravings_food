@@ -38,7 +38,7 @@ const cardVariant = {
 
 export const Features = () => {
   return (
-    <div className="px-6 py-16 md:px-20 lg:py-20">
+    <div className="px-6 py-16 lg:px-20 lg:py-20">
       {/* HEADER */}
       <motion.div
         className="font-poppins flex flex-col gap-4 text-center max-w-2xl mx-auto"

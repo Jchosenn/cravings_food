@@ -28,7 +28,7 @@ const infoCards = [
 
 export const PageCarousel = () => {
   return (
-    <div className="px-6 py-10 md:px-20 lg:py-24 flex flex-col gap-20">
+    <div className="px-6 py-10 lg:px-20 lg:py-24 flex flex-col gap-20">
       <div className="grid md:grid-cols-3 gap-12">
         {infoCards.map((card, index) => (
           <motion.div
