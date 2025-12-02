@@ -3,6 +3,7 @@ import { Hero } from "../components/Hero"
 import { PageCarousel } from "../components/PageCarousel"
 import { Features } from "../components/Features"
 import { Restaurant } from "../components/Restaurant"
+import { Review } from "../components/Review"
 
 export const Home = () => {
   return (
@@ -12,6 +13,7 @@ export const Home = () => {
         <PageCarousel/>
         <Features/>
         <Restaurant/>
+        <Review/>
     </div>
   )
 }
