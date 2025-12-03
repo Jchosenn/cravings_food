@@ -25,20 +25,22 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="px-6 py-14 lg:px-20 bg-[#FAFAFA] font-rubik">
+    <footer className="px-6 py-14 lg:px-20 font-rubik">
       <div className="flex flex-col gap-14 md:gap-10 lg:flex-row justify-between">
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="space-y-6 max-w-xs"
+          className="space-y-20 max-w-xs"
         >
           <img src={logo} alt="Craving Logo" className="w-32 md:w-36" />
+          <div>
           <p className="font-medium text-gray-700">Customer service</p>
           <p className="text-sm text-gray-500">
             24/7 support by chat, email & calls
           </p>
+          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
